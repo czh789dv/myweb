@@ -22,7 +22,7 @@
 <script>
 import hometitle from '../components/Home/HomeTitle'
 import Aside from '../components/Home/Aside'
-import MainContent from '../components/Home/MainContent'
+import MainContent from './Content'
 export default {
   components: {
     hometitle,
@@ -38,7 +38,7 @@ export default {
     height: 50rem;
 
     .el-header {
-      background-color: #B3C0D1;
+      // background-color: #B3C0D1;
       color: #333;
       text-align: center;
       line-height: 60px;

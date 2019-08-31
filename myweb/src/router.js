@@ -7,8 +7,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: () => import('./views/Home.vue')
+      redirect: '/admin/overview',
+      component: () => import('./views/Home.vue'),
+    },
+    {
+      path: '/admin',
+      redirect: '/admin/overview',
+      component: () => import('./views/Home.vue'),
+      children: [
+        {
+          path: 'overview',
+          name: 'Overview',
+          component: () => import('./components/Home/MainContent')
+        }
+      ]
     }
   ]
 })
